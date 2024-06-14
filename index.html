@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+<body class="h-screen overflow-y-visible sm:overflow-hidden  flex items-center justify-center" style="background: #DCCCBC;">
+  <div class="w-full h-screen flex flex-col sm:flex-row" id="nav-menu">
+              <div class="w-full flex flex-wrap sm:flex-nowrap">
+                  <div class="w-full sm:w-1/4 min-w-[250px] relative bg-white shadow sm:h-screen flex-col justify-between flex">
+                      <div class="flex flex-wrap justify-center">
+                          <div class="h-8 sm:h-16 mt-4 sm:mt-8 mb-4 w-full flex justify-center items-center" id="menu-title">
+                            <button aria-label="toggle sidebar" id="toggleSidebar" class="h-10 w-10 left-4 sm:hidden flex items-center cursor-pointer absolute left-0" onclick="toggleSubmenu()">
+                              <svg class="h-8 w-8 text-black" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>                              </svg>
+                            </button>
+                            <div class="text-2xl font-bold">白頭翁不吃小米</div>
+                            <div class="h-10 sm:h-16 w-10 sm:w-16 absolute right-5 sm:-right-8 bg-white border-2 border-gray-200 rounded-full">
+                              <div class="relative w-full h-full">
+                                <div id="top"></div>
+                                <div id="bottom"></div>
+                                <div id="eye"></div>
+                                <div id="mouth"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="mt-8 flex flex-wrap justify-center hidden sm:block" id="sub-menu">
+                              <li class="flex w-full selected justify-center text-black cursor-pointer items-center mb-6">
+                                  <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white" onclick="toggleSelected(this)">
+                                      <span class="text-sm ml-2">白頭翁的特性</span>
+                                  </a>
+                              </li>
+                              <li class="flex w-full justify-center text-black cursor-pointer items-center mb-6">
+                                  <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white" onclick="toggleSelected(this)">
+                                      <span class="text-sm ml-2">白頭翁的故事</span>
+                                  </a>
+                              </li>
+                              <li class="flex w-full justify-center text-black cursor-pointer items-center mb-6">
+                                  <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white" onclick="toggleSelected(this)">
+                                      <span class="text-sm ml-2">白頭翁的美照</span>
+                                  </a>
+                              </li>
+                              <li class="flex w-full justify-center text-black cursor-pointer items-center mb-6">
+                                  <a href="javascript:void(0)" class="flex items-center focus:outline-none focus:ring-2 focus:ring-white" onclick="toggleSelected(this)">
+                                      <span class="text-sm ml-2">白頭翁的危機</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="flex-col container w-full">                       
+                      <div class="banner w-full aspect-[4/3] sm:aspect-video max-h-[63%] min-h-[100px] flex flex-col justify-end items-end">
+                        <div class="text-right text-white font-bold text-3xl px-2 sm:px-6">白頭翁 (Chinese bulbul)</div>
+                        <div class="text-right text-white text-lg  px-2 sm:px-6 pb-4 sm:pb-6">又名白頭鵯。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約 8~10 年。</div>
+                      </div>
+                      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-6 sm:p-8">
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="col-span-1 text-4xl font-bold relative">
+                                  外<br>觀
+                                  <div class="h-6 w-6 absolute left-[28px] top-[68px] opacity-60 border-8 border-[#AA6666] rounded-full"></div>
+                                </div>
+                                <div class="col-span-2">白頭鵯體長約17到22公分，額至頭頂純黑色而富有光澤，兩眼上方至後枕白色，形成一白色枕環。耳羽後部有一白斑，此白環與白斑在黑色的頭部均極為醒目，老鳥的枕羽(後頭部)更潔白，所以又叫「白頭翁」。</div>
+                            </div>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="col-span-1 text-4xl font-bold relative">
+                                  棲<br>地
+                                  <div class="h-6 w-6 absolute left-[28px] top-[68px] opacity-60 border-8 border-[#AA6666] rounded-full"></div>
+                                </div>
+                                <div class="col-span-2">白頭翁和麻雀、綠繡眼合稱「城市三寶」，常成群出現在平原區灌木叢、丘陵樹林地帶，以及校園、公園、庭院、行道中的各種高高的電線與樹上。</div>
+                            </div>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="col-span-1 text-4xl font-bold relative">
+                                  食<br>性
+                                  <div class="h-6 w-6 absolute left-[28px] top-[68px] opacity-60 border-8 border-[#AA6666] rounded-full"></div>
+                                </div>
+                                <div class="col-span-2">以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，還會吃嫩葉嫩芽，尤其是胡蝶蘭的嫩葉嫩芽葉，偶爾啄食昆蟲。</div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <script>
+                  function toggleSubmenu() {
+                    const submenu = document.getElementById("sub-menu");
+                    const menuicon = document.getElementById("menu-icon");
+                    submenu.classList.toggle("hidden");
+                    if (submenu.classList.contains("hidden")) {
+                      menuicon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>`;
+                    } 
+                    else {
+                      menuicon.innerHTML = `<line x1="18" y1="6" x2="6" y2="18" /> <line x1="6" y1="6" x2="18" y2="18" />`;
+                    }
+                  }
+                  function toggleSelected(link) {
+                    const selectedLink = document.querySelector('.selected');
+                    if (selectedLink) {
+                      selectedLink.classList.remove('selected');
+                    }
+                    link.classList.add('selected');
+                  }
+              </script>
+  </div>
+  </body>
+</html>
